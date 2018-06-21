@@ -18,7 +18,7 @@ MongoClient.connect('mongodb://localhost:27017/', (error, db) => {
   //   })
 
   dbo.collection('User').insertOne({
-    name: 'Aayush',
+    name: 'Dhan',
     age: 25
   }, (err, res) => {
     if (err) throw err;
