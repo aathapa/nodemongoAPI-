@@ -20,6 +20,12 @@ app.post('/todos', (req, res) => {
   
 })
 
+app.get("/todos", (req, res) => {
+  Todo.find()
+    .then(todos => res.send({ todos }))
+    .catch(e => res.send(e))
+})
+
 app.post("/user", (req, res) => {
   const newUser = new User({
     email: req.body.user
