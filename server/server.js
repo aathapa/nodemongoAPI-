@@ -7,6 +7,8 @@ const { Todo,User } = require('./models');
 
 const app = express();
 
+const PORT = process.env.PORT || 3000;
+
 app.use(bodyParser.json());
 
 //POST method for todos
@@ -57,5 +59,5 @@ app.post("/user", (req, res) => {
     .catch(e => res.status(400).send(e));
 })
 
-app.listen(3000,()=> console.log('app is runnig on port 3000'));
+app.listen(PORT,()=> console.log(`app is runnig on port ${PORT}`));
 
